@@ -22,22 +22,12 @@ If one of the tasks is not working or you ran out of time you can always check-o
 
 # Tasks
 
-## Repository
-You've been provided with basic Kubernetes manifests to deploy on an Openshift cluster in the cloud.
-The industry standard way of doing this is by using Helm charts or Kustomize but these are a bit more complex so as such we're using the most basic setup.
-
-## Devcontainer
-
-There is another devcontainer available for you to use that has OpenShift CLI / Helm installed for you to use. Create the codespace for this repository like you did in the previous.
-
-## Task 1
-
-### Prerequisites
+## Prerequisites
 
 * ***Fork** the base repository to your own account!*
 * Start your own CodeSpace from the "main" branch **or** run everything locally in VSCode with the devcontainers extension! (This exercise was mostly tested on the GitHub one, so safe to use that)
     ![Create Codespace](docs/github-create-codespace.png)
-    * This can take a while (+-5mins), so don't panic.
+    * This can take a while (+-2mins), so don't panic.
     * You should get some pop-ups to install extensions from the devcontainer.json file
 * Run the command `docker run -p 80:80 nginx` to create a NGINX container inside your devcontainer
     * VSCode should propose to open up the forwarded port with a button "Open in Browser" and you should see the NGINX Welcome page
@@ -52,6 +42,7 @@ There is another devcontainer available for you to use that has OpenShift CLI / 
     * ./.devcontainer/devcontainer.json = describes how your devcontainer is setup
     * ./workshop-service/* = Contains all the source code
     * ./Dockerfile = Docker multi-stage file to build & run our Go application
+    * **TO DO**
 * Test the Dockerfile using `docker build -t test-workshop . --progress=plain` to build the image & run the image by using `docker run -p 3000:3000 test-workshop`
     * The container should be reachable on the URL provided by the GitHub workspace **or** on localhost from your browser
     * You can also surf to the /workshop endpoint
@@ -62,7 +53,7 @@ You can also share your links that GitHub codespaces generate when you're runnin
 
 ![Change port visibility](docs/vscode-port-visiblity.png)
 
-### Task
+## Task 1
 
 Right now we've got a working "local" development environment from we can develop, however our goal is as followed:
 * We want to be able to work with multiple developers and have consistent & repeatable builds for our application
