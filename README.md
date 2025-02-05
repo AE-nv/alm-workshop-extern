@@ -87,24 +87,28 @@ The assignment is as followed:
 * Login to RedHat Openshift Sandbox https://console.redhat.com/openshift/sandbox
   * Press "Getting started"
   * You should be able to launch OpenShift
+  
     ![OpenShift Launch](docs/redhat-start-page.png)
+
 * Deploy your application from the Developer menu by selecting Add+
   * If you scroll down a bit you should see "Container Images" as option
+  
     ![OpenShift Add Container Images](docs/openshift-add-container-images.png)
+
   * You should use your quay.io image registry URL now to deploy your application
-    * Deployment Type = Deployment
-    * Icon = Golang
+    * Runtime icon = Golang
+    * Deploy Resource type = Deployment
     * Rest should be OK by default
 * Your application should now be available from a remote endpoint
   * You should be transferred to the Topology view and your application should have a little arrow icon you can click to open the route.
-  ![OpenShift Route](docs/openshift-topology-open-route.png)
-
+  
+    ![OpenShift Route](docs/openshift-topology-open-route.png)
 
 This was a lot of manual effort, imagine doing this for each release! We want to automate this flow to reduce the effort to deploy but mostly to have a consistent way of doing this. Right now the process is quite error-prone.
 
 ## Task 4
 
-We will start using IaC to make this process a bit more consistent. Kubernetes as discussed is basically one big API service that uses YAML files as interfaces to create resources. These resources are then interpreted by Kubernetes and the right actions are taken to make sure that your application is deployed as a container, has connectivity, is available from outside (ingress), ...
+We will start using Infrastructure as Code (IaC) to make this process a bit more consistent. Kubernetes as discussed is basically one big API service that uses YAML files as interfaces to create resources. These resources are then interpreted by Kubernetes and the right actions are taken to make sure that your application is deployed as a container, has connectivity, is available from outside (ingress), ...
 
 * Let's undeploy our previous application version first by selecting the Application in the "Topology View" and select "Delete application"
   ![Delete application](docs/openshift-delete-app.png)
@@ -134,7 +138,7 @@ We now have an automated pipeline to deploy our application to DEV! In the next 
 
 * Update the content of the /workshop endpoint:
     * To include yourself in the list of participants
-    * Add a field "SweaterScore" that holds a numeric value of 1-10 on the presentators Christmas Sweater.
+    * Add a field "SweaterScore" that holds a numeric value of 1-10 on the presentators sweaters.
         * Provide Validation on this range.
         * The default value of the SweaterScore is setup via an environment variable.
 * Release this code as 1.1.0
