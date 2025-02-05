@@ -182,28 +182,6 @@ The next step is to now improve upon this, so that you as a developer can focus 
 * Deploy a Redis Helm-chart as a dependency and change the application to store a key into this Redis
   * The deployment part should be pretty easy if you've set up your Helm Chart correctly the code changes are a bit more work
 
-# Directory structure
-
-```
-/
-|── /.devcontainer
-    └── devcontainer.json
-|── /.github
-    |── /workflows
-        └── ci.yaml
-|── /docs
-|── /infra
-    └── openshift.yaml
-|── /workshop-service
-    ├── main.go
-    |── workshop.go
-    ├── go.mod
-    └── go.sum
-|── .gitignore
-|── Dockerfile
-└── README.md
-```
-
 # Solutions / Tips
 
 In general I tried to work in a branching structure which is named as followed solution/task-<number>-<description>
