@@ -7,8 +7,16 @@ ENV DEBIAN_FRONTEND=noninteractive
 # Install required dependencies
 RUN apt-get update && apt-get install -y \
     curl wget git sudo unzip tar bash-completion \
-    ca-certificates lsb-release jq iproute2 docker.io \
-    && rm -rf /var/lib/apt/lists/*
+    ca-certificates lsb-release jq iproute2 gnupg2 software-properties-common
+
+# Add Docker's official GPG key
+RUN curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+# Add Docker's official repository
+RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian bookworm stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Install the latest Docker version
+RUN apt-get update && apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin
 
 # Install OpenShift CLI (oc)
 RUN curl -L https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable/openshift-client-linux.tar.gz | \
