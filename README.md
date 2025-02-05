@@ -84,7 +84,6 @@ The assignment is as followed:
 
 ## Task 3
 
-* ***Fork** the base repository to your own account!*
 * Login to RedHat Openshift Sandbox https://console.redhat.com/openshift/sandbox
   * Press "Getting started"
   * You should be able to launch OpenShift
