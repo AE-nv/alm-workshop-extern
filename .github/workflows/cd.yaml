@@ -7,7 +7,7 @@ on:
 
 env:
   OPENSHIFT_SERVER: 'https://api.rm3.7wse.p1.openshiftapps.com:6443'
-  OPENSHIFT_NAMESPACE: 'daanmortier98-dev'
+  OPENSHIFT_NAMESPACE: 'mortierdaan-dev'
 
 jobs:
   deploy:
