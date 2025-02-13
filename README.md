@@ -1,24 +1,26 @@
-# Introduction
+# ALM Workshop 2025
 
-Hi everybody! Welcome to the ALM Workshop of 2025!
+## Introduction
 
-We give this workshop with a few goals in mind:
-* Learn new (or unfamiliar) technologies
-* Implement CI ALM concepts
-    * You learned the theory, now it's time to implement
+Hi everyone! Welcome to the **ALM Workshop 2025**!
 
-While it's easier to work with technologies that you use day-to-day, today I would like to try some technologies that you (probably) haven't really worked with yet:
+This workshop is designed to give you hands-on experience with:
+* Learning new and unfamiliar technologies.
+* Implementing **Continuous Integration (CI) and Application Lifecycle Management (ALM)** concepts.
+* Applying the theory you’ve learned in a real-world setup.
 
-* Golang
-* Quay
-* GitHub DevSpaces / DevContainers
-* GitHub Actions
-* RedHat OpenShift
+To make things more interesting, we’ll be using technologies that you may not have worked with before:
+* **Golang** – A modern programming language known for its efficiency and simplicity.
+* **Quay** – A container registry for storing and managing container images.
+* **GitHub DevSpaces / DevContainers** – A development environment that works in the cloud.
+* **GitHub Actions** – A CI/CD pipeline tool for automating software workflows.
+* **RedHat OpenShift** – A Kubernetes-based container platform for deploying applications.
 
-# Workshop
+## Workshop Structure
 
-The workshop will be divided in several tasks that each represent a checkpoint.
-If one of the tasks is not working or you ran out of time you can always check-out the branch for that specific checkpoint and catch-up from there.
+The workshop is divided into several tasks, each serving as a checkpoint. If you get stuck or run out of time, you can always check out the corresponding branch to catch up.
+
+---
 
 # Tasks
 
@@ -26,6 +28,7 @@ If one of the tasks is not working or you ran out of time you can always check-o
 
 * ***Fork** the base repository to your own account!*
 * Start your own CodeSpace from the "main" branch **or** run everything locally in VSCode with the devcontainers extension! (This exercise was mostly tested on the GitHub one, so safe to use that)
+  
     ![Create Codespace](docs/github-create-codespace.png)
     * This can take a while (+-2mins), so don't panic.
     * You should get some pop-ups to install extensions from the devcontainer.json file
